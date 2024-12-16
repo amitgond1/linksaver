@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link and Notes Saver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: fadeInDown 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+            padding: 10px;
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #1abc9c;
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .section {
+            margin: 40px 0;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            nav a {
+                font-size: 1rem;
+                margin: 10px 0;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            .section p {
+                font-size: 1rem;
+            }
+        }
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Link and Notes Saver</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="image.html">Image</a>
+        <a href="notes2.html">Notes</a>
+        <a href="link.html">Link</a>
+        <a href="#leetcode">LeetCode</a>
+        <a href="coding.html">Coding-Motivation </a>
+    </nav>
+    <div class="container">
+        <!-- About Section -->
+        <div class="section" id="about">
+            <h2>About This Website</h2>
+            <p>This platform is designed to help you save, organize, and manage your important links, notes, and PDFs effectively. Whether you're a student, professional, or just someone who loves to stay organized, this tool is perfect for you!</p>
+            <img src="a2.jpg" alt="Organize your notes">
+        </div>
+
+        <!-- Features Section -->
+        <div class="section" id="features">
+            <h2>Key Features</h2>
+            <p>Our website offers a variety of features to enhance your productivity:</p>
+            <img src="a3.avif" alt="Features of the website">
+        </div>
+
+        <!-- LeetCode Section -->
+        <div class="section" id="leetcode">
+            <h2>LeetCode Challenges</h2>
+            <p>Sharpen your programming skills with challenging problems. Click the button below to visit LeetCode!</p>
+            <img src="a4.avif" alt="LeetCode Challenges" 
+                 style="margin-top: 20px; max-width: 100%; height: auto; border-radius: 10px;">
+            <a href="https://leetcode.com/problemset/" target="_blank" 
+               style="text-decoration: none; background-color: #1abc9c; 
+                      color: white; padding: 10px 20px; 
+                      border-radius: 5px; font-size: 1.2rem; 
+                      margin-top: 30px; display: inline-block; 
+                      transition: background-color 0.3s ease;">
+                Go to LeetCode
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Developed by Amit</p>
+    </footer>
+</body>
+</html>
